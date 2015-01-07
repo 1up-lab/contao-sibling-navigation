@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+    <file datatype="php" original="system/modules/oneup-sibling-navigation/languages/en/default.php" source-language="en">
+        <body>
+            <trans-unit id="CSTM.prevText">
+                <source>&#171;</source>
+            </trans-unit>
+            <trans-unit id="CSTM.selfText">
+                <source>Overview</source>
+            </trans-unit>
+            <trans-unit id="CSTM.nextText">
+                <source>&#187;</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
