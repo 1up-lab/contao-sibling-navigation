@@ -8,8 +8,7 @@ class SiblingNavigation extends \ContentElement
 
     public function generate()
     {
-        if (TL_MODE == 'BE')
-        {
+        if (TL_MODE == 'BE') {
             $objTemplate = new \BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['oneup_sibling_navigation'][0]) . ' ###';
@@ -25,14 +24,12 @@ class SiblingNavigation extends \ContentElement
         global $objPage;
 
         // Set the item from the auto_item parameter
-        if (!isset($_GET['items']) && $GLOBALS['TL_CONFIG']['useAutoItem'] && isset($_GET['auto_item']))
-        {
+        if (!isset($_GET['items']) && $GLOBALS['TL_CONFIG']['useAutoItem'] && isset($_GET['auto_item'])) {
             \Input::setGet('items', \Input::get('auto_item'));
         }
 
         // Do not index or cache the page if no news item has been specified
-        if (!\Input::get('items'))
-        {
+        if (!\Input::get('items')) {
             $objPage->noSearch = 1;
             $objPage->cache = 0;
             return [];
@@ -43,8 +40,7 @@ class SiblingNavigation extends \ContentElement
 
         $current = \NewsModel::findByIdOrAlias($alias);
 
-        if (!in_array($current->pid, $allowedArchives))
-        {
+        if (!in_array($current->pid, $allowedArchives)) {
             $allowedArchives = [$current->pid];
         }
 
