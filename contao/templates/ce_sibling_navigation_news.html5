@@ -5,7 +5,9 @@
         <a class="s-prev" href="<?php echo $this->prev; ?>" title=""><?php echo $this->prevText; ?></a>
     <?php endif; ?>
 
-    <a href="<?php echo $this->self; ?>" title=""><?php echo $this->selfText; ?></a>
+    <?php if ($this->self): ?>
+        <a href="<?php echo $this->self; ?>" title=""><?php echo $this->selfText; ?></a>
+    <?php endif; ?>
 
     <?php if ($this->next): ?>
         <a class="s-next" href="<?php echo $this->next; ?>" title=""><?php echo $this->nextText; ?></a>

@@ -22,6 +22,8 @@ class SiblingNavigation extends \ContentElement
 
     protected function generateSiblingNavigation($objPage)
     {
+        global $objPage;
+
         // Set the item from the auto_item parameter
         if (!isset($_GET['items']) && $GLOBALS['TL_CONFIG']['useAutoItem'] && isset($_GET['auto_item']))
         {
@@ -31,40 +33,47 @@ class SiblingNavigation extends \ContentElement
         // Do not index or cache the page if no news item has been specified
         if (!\Input::get('items'))
         {
-            global $objPage;
             $objPage->noSearch = 1;
             $objPage->cache = 0;
-            return '';
+            return [];
         }
 
-        $alias = \Input::get('items');
+        $alias           = \Input::get('items');
+        $allowedArchives = deserialize($this->snn_news_archives);
 
         $current = \NewsModel::findByIdOrAlias($alias);
 
+        if (!in_array($current->pid, $allowedArchives))
+        {
+            $allowedArchives = [$current->pid];
+        }
+
         // find prev
-        $prev = \NewsModel::findAll(array(
-            'column' => array(
-                "pid = '$current->pid'",
+        $prev = \NewsModel::findAll([
+            'column' => [
+                "pid IN (" . implode(',', $allowedArchives) . ")",
                 "published = '1'",
-                "tl_news.tstamp < $current->tstamp"
-            ),
-            'order' => 'tl_news.tstamp DESC',
+                "tl_news.date < $current->date",
+                "tl_news.time < $current->time",
+            ],
+            'order' => 'tl_news.time DESC, tl_news.date DESC',
             'limit' => 1
-        ));
+        ]);
 
         if ($prev) {
             $prev = $prev->current();
         }
 
-        $next = \NewsModel::findAll(array(
-            'column' => array(
-                "pid = '$current->pid'",
+        $next = \NewsModel::findAll([
+            'column' => [
+                "pid IN (" . implode(',', $allowedArchives) . ")",
                 "published = '1'",
-                "tl_news.tstamp > $current->tstamp"
-            ),
-            'order' => 'tl_news.tstamp ASC',
+                "tl_news.date > $current->date",
+                "tl_news.time > $current->time",
+            ],
+            'order' => 'tl_news.time ASC, tl_news.date ASC',
             'limit' => 1
-        ));
+        ]);
 
         if ($next) {
             $next = $next->current();
@@ -73,12 +82,12 @@ class SiblingNavigation extends \ContentElement
         // take care, prev/next are swapped
         return array(
             'prev' => $this->generateNewsUrl($objPage, $next),
-            'this' => $this->generateNewsUrl($objPage, $current),
+            'this' => $this->generateFrontendUrl($objPage->row(), null, $objPage->language),
             'next' => $this->generateNewsUrl($objPage, $prev)
         );
     }
 
-    protected function generateNewsUrl($objPage, $news)
+    protected function generateNewsUrl($objPage, $news = null)
     {
         if (null === $news) {
             return null;

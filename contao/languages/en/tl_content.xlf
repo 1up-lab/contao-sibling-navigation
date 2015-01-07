@@ -1,11 +1,17 @@
 <?xml version="1.0" ?><xliff version="1.1">
   <file datatype="php" original="system/modules/oneup-sibling-navigation/languages/en/tl_content.php" source-language="en">
     <body>
-        <trans-unit id="CTE.oneup_sibling_navigation.0">
-            <source>Sibling navigation</source>
+        <trans-unit id="tl_content.snn_news_archives.0">
+            <source>News archives</source>
         </trans-unit>
-        <trans-unit id="CTE.oneup_sibling_navigation.1">
-            <source>Creates a sibling navigation (forth/back).</source>
+        <trans-unit id="tl_content.snn_news_archives.1">
+            <source>Choose your preferred news archives to include for the navigation.</source>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_news.0">
+            <source>Sibling navigation (News)</source>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_news.1">
+            <source>Creates a sibling navigation for news (forth/back).</source>
         </trans-unit>
     </body>
   </file>
