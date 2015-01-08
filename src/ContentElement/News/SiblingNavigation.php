@@ -11,7 +11,7 @@ class SiblingNavigation extends \ContentElement
         if (TL_MODE == 'BE') {
             $objTemplate = new \BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['oneup_sibling_navigation'][0]).' ###';
+            $objTemplate->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['sibling_navigation_news'][0]).' ###';
 
             return $objTemplate->parse();
         }
