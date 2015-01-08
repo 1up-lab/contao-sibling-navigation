@@ -11,12 +11,43 @@ class SiblingNavigation extends \ContentElement
         if (TL_MODE == 'BE') {
             $objTemplate = new \BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['oneup_sibling_navigation'][0]) . ' ###';
+            $objTemplate->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['oneup_sibling_navigation'][0]).' ###';
 
             return $objTemplate->parse();
         }
 
         return parent::generate();
+    }
+
+    protected function sortOutProtected($archives)
+    {
+        if (BE_USER_LOGGED_IN || !is_array($archives) || empty($archives)) {
+            return $archives;
+        }
+
+        $this->import('FrontendUser', 'User');
+        $objArchive = \NewsArchiveModel::findMultipleByIds($archives);
+        $arrArchives = [];
+
+        if ($objArchive !== null) {
+            while ($objArchive->next()) {
+                if ($objArchive->protected) {
+                    if (!FE_USER_LOGGED_IN) {
+                        continue;
+                    }
+
+                    $groups = deserialize($objArchive->groups);
+
+                    if (!is_array($groups) || empty($groups) || !count(array_intersect($groups, $this->User->groups))) {
+                        continue;
+                    }
+                }
+
+                $arrArchives[] = $objArchive->id;
+            }
+        }
+
+        return $arrArchives;
     }
 
     protected function generateSiblingNavigation($objPage)
@@ -32,28 +63,35 @@ class SiblingNavigation extends \ContentElement
         if (!\Input::get('items')) {
             $objPage->noSearch = 1;
             $objPage->cache = 0;
+
             return [];
         }
 
-        $alias           = \Input::get('items');
-        $allowedArchives = deserialize($this->snn_news_archives);
+        $this->news_archives = $this->sortOutProtected(deserialize($this->snn_news_archives));
+
+        // Return if there are no archives
+        if (!is_array($this->news_archives) || empty($this->news_archives)) {
+            return [];
+        }
+
+        $alias = \Input::get('items');
 
         $current = \NewsModel::findByIdOrAlias($alias);
 
-        if (!in_array($current->pid, $allowedArchives)) {
-            $allowedArchives = [$current->pid];
+        if (!in_array($current->pid, $this->news_archives)) {
+            $this->news_archives = [$current->pid];
         }
 
         // find prev
         $prev = \NewsModel::findAll([
             'column' => [
-                "pid IN (" . implode(',', $allowedArchives) . ")",
+                "pid IN (".implode(',', $this->news_archives).")",
                 "published = '1'",
                 "tl_news.date < $current->date",
                 "tl_news.time < $current->time",
             ],
             'order' => 'tl_news.time DESC, tl_news.date DESC',
-            'limit' => 1
+            'limit' => 1,
         ]);
 
         if ($prev) {
@@ -62,13 +100,13 @@ class SiblingNavigation extends \ContentElement
 
         $next = \NewsModel::findAll([
             'column' => [
-                "pid IN (" . implode(',', $allowedArchives) . ")",
+                "pid IN (".implode(',', $this->news_archives).")",
                 "published = '1'",
                 "tl_news.date > $current->date",
                 "tl_news.time > $current->time",
             ],
             'order' => 'tl_news.time ASC, tl_news.date ASC',
-            'limit' => 1
+            'limit' => 1,
         ]);
 
         if ($next) {
@@ -79,7 +117,7 @@ class SiblingNavigation extends \ContentElement
         return array(
             'prev' => $this->generateNewsUrl($objPage, $next),
             'this' => $this->generateFrontendUrl($objPage->row(), null, $objPage->language),
-            'next' => $this->generateNewsUrl($objPage, $prev)
+            'next' => $this->generateNewsUrl($objPage, $prev),
         );
     }
 
@@ -108,5 +146,4 @@ class SiblingNavigation extends \ContentElement
         $this->Template->selfText = $GLOBALS['TL_LANG']['CSTM']['selfText'];
         $this->Template->nextText = $GLOBALS['TL_LANG']['CSTM']['nextText'];
     }
-
 }

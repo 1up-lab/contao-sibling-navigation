@@ -13,25 +13,21 @@ class NewsHelper extends \Backend
         $this->import('BackendUser', 'User');
     }
 
-
     /**
      * Get all news archives and return them as array
      * @return array
      */
     public function getNewsArchives()
     {
-        if (!$this->User->isAdmin && !is_array($this->User->news))
-        {
+        if (!$this->User->isAdmin && !is_array($this->User->news)) {
             return [];
         }
 
         $arrArchives = [];
         $objArchives = $this->Database->execute("SELECT id, title FROM tl_news_archive ORDER BY title");
 
-        while ($objArchives->next())
-        {
-            if ($this->User->hasAccess($objArchives->id, 'news'))
-            {
+        while ($objArchives->next()) {
+            if ($this->User->hasAccess($objArchives->id, 'news')) {
                 $arrArchives[$objArchives->id] = $objArchives->title;
             }
         }
