@@ -9,7 +9,7 @@
     <?php endif; ?>
 
     <?php if ($this->next): ?>
-        <a class="s-next" href="<?php echo $this->next; ?>" title="">&#187; <?php echo $GLOBALS['TL_LANG']['CSTM']['next']['news'] ?></a>
+        <a class="s-next" href="<?php echo $this->next; ?>" title=""><?php echo $GLOBALS['TL_LANG']['CSTM']['next']['news'] ?> &#187;</a>
     <?php endif; ?>
 
 </div>
