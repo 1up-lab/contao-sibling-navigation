@@ -79,7 +79,7 @@ class SiblingNavigation extends \ContentElement
         $current = \CalendarEventsModel::findByIdOrAlias($alias);
 
         if (!in_array($current->pid, $this->calendars)) {
-            $this->news_archives = [$current->pid];
+            $this->calendars = [$current->pid];
         }
 
         // find prev
