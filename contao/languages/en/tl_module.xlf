@@ -1,0 +1,18 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="system/modules/sibling-navigation/languages/en/tl_module.php" source-language="en">
+    <body>
+        <trans-unit id="tl_module.snn_news_archives.0">
+            <source>News archives</source>
+        </trans-unit>
+        <trans-unit id="tl_module.snn_news_archives.1">
+            <source>Choose your preferred news archives to include for the navigation.</source>
+        </trans-unit>
+        <trans-unit id="tl_module.snn_event_calendars.0">
+            <source>Calendars</source>
+        </trans-unit>
+        <trans-unit id="tl_module.snn_event_calendars.1">
+            <source>Choose your preferred calendars to include for the navigation.</source>
+        </trans-unit>
+    </body>
+  </file>
+</xliff>

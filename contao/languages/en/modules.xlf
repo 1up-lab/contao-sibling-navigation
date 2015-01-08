@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="system/modules/sibling-navigation/languages/en/modules.php" source-language="en">
+        <body>
+            <trans-unit id="FMD.sibling_navigation_news.0">
+                <source>Sibling navigation</source>
+            </trans-unit>
+            <trans-unit id="FMD.sibling_navigation_news.1">
+                <source>Creates a sibling navigation (Previous/Next)</source>
+            </trans-unit>
+            <trans-unit id="FMD.sibling_navigation_event.0">
+                <source>Sibling navigation</source>
+            </trans-unit>
+            <trans-unit id="FMD.sibling_navigation_event.1">
+                <source>Creates a sibling navigation (Previous/Next)</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,12 +1,12 @@
 <?php
 
-namespace Oneup\SiblingNavigation\ContentElement\Event;
+namespace Oneup\SiblingNavigation\Module\Event;
 
 use Oneup\SiblingNavigation\Helper\Event\EventHelper;
 
-class SiblingNavigation extends \ContentElement
+class SiblingNavigation extends \Module
 {
-    protected $strTemplate = 'ce_sibling_navigation_event';
+    protected $strTemplate = 'mod_sibling_navigation_event';
 
     public function generate()
     {
@@ -14,8 +14,13 @@ class SiblingNavigation extends \ContentElement
             $objTemplate = new \BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### '
-                . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['sibling_navigation_event'][0])
+                . utf8_strtoupper($GLOBALS['TL_LANG']['MOD']['sibling_navigation_event'][0])
                 . ' ###';
+
+            $objTemplate->title = $this->headline;
+            $objTemplate->id = $this->id;
+            $objTemplate->link = $this->name;
+            $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
 
             return $objTemplate->parse();
         }
@@ -32,7 +37,6 @@ class SiblingNavigation extends \ContentElement
         $siblingNavigation = $helper->generateSiblingNavigation($objPage, $this->snn_event_calendars);
 
         $this->Template->prev     = $siblingNavigation['prev'];
-        $this->Template->overview = $siblingNavigation['overview'];
         $this->Template->next     = $siblingNavigation['next'];
     }
 }

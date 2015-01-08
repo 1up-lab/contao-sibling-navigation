@@ -1,12 +1,12 @@
 <?php
 
-namespace Oneup\SiblingNavigation\ContentElement\News;
+namespace Oneup\SiblingNavigation\Module\News;
 
 use Oneup\SiblingNavigation\Helper\News\NewsHelper;
 
-class SiblingNavigation extends \ContentElement
+class SiblingNavigation extends \Module
 {
-    protected $strTemplate = 'ce_sibling_navigation_news';
+    protected $strTemplate = 'mod_sibling_navigation_news';
 
     public function generate()
     {
@@ -14,8 +14,13 @@ class SiblingNavigation extends \ContentElement
             $objTemplate = new \BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### '
-                . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['sibling_navigation_news'][0])
+                . utf8_strtoupper($GLOBALS['TL_LANG']['MOD']['sibling_navigation_news'][0])
                 . ' ###';
+
+            $objTemplate->title = $this->headline;
+            $objTemplate->id = $this->id;
+            $objTemplate->link = $this->name;
+            $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
 
             return $objTemplate->parse();
         }

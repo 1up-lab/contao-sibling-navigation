@@ -8,17 +8,11 @@
             <trans-unit id="CSTM.prev.news">
                 <source>Previous</source>
             </trans-unit>
-            <trans-unit id="CSTM.overview.news">
-                <source>Overview</source>
-            </trans-unit>
             <trans-unit id="CSTM.next.news">
                 <source>Next</source>
             </trans-unit>
             <trans-unit id="CSTM.prev.event">
                 <source>Previous</source>
-            </trans-unit>
-            <trans-unit id="CSTM.overview.event">
-                <source>Overview</source>
             </trans-unit>
             <trans-unit id="CSTM.next.event">
                 <source>Next</source>
