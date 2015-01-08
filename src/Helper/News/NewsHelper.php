@@ -98,8 +98,12 @@ class NewsHelper extends \Backend
 
         // take care, prev/next are swapped
         return [
-            'prev'     => $this->generateNewsUrl($objPage, $next),
-            'next'     => $this->generateNewsUrl($objPage, $prev),
+            'prev'      => $this->generateNewsUrl($objPage, $next),
+            'next'      => $this->generateNewsUrl($objPage, $prev),
+            'prevTitle' => $next->headline,
+            'nextTitle' => $prev->headline,
+            'objPrev'   => $next,
+            'objNext'   => $prev,
         ];
     }
 

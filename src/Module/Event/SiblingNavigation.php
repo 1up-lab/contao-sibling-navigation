@@ -36,7 +36,11 @@ class SiblingNavigation extends \Module
 
         $siblingNavigation = $helper->generateSiblingNavigation($objPage, $this->snn_event_calendars);
 
-        $this->Template->prev     = $siblingNavigation['prev'];
-        $this->Template->next     = $siblingNavigation['next'];
+        $this->Template->prev      = $siblingNavigation['prev'];
+        $this->Template->next      = $siblingNavigation['next'];
+        $this->Template->prevTitle = $siblingNavigation['prevTitle'];
+        $this->Template->nextTitle = $siblingNavigation['nextTitle'];
+        $this->Template->objPrev   = $siblingNavigation['objPrev'];
+        $this->Template->objNext   = $siblingNavigation['objNext'];
     }
 }
