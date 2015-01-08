@@ -5,14 +5,23 @@
             <trans-unit id="tl_content.config_legend">
                 <source>Settings</source>
             </trans-unit>
-            <trans-unit id="CSTM.prevText">
-                <source>&#171;</source>
+            <trans-unit id="CSTM.prev.news">
+                <source>Previous</source>
             </trans-unit>
-            <trans-unit id="CSTM.selfText">
+            <trans-unit id="CSTM.overview.news">
                 <source>Overview</source>
             </trans-unit>
-            <trans-unit id="CSTM.nextText">
-                <source>&#187;</source>
+            <trans-unit id="CSTM.next.news">
+                <source>Next</source>
+            </trans-unit>
+            <trans-unit id="CSTM.prev.event">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="CSTM.overview.event">
+                <source>Overview</source>
+            </trans-unit>
+            <trans-unit id="CSTM.next.event">
+                <source>Next</source>
             </trans-unit>
         </body>
     </file>

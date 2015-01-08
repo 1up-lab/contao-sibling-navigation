@@ -6,17 +6,29 @@
                 <source>Settings</source>
                 <target>Einstellungen</target>
             </trans-unit>
-            <trans-unit id="CSTM.prevText">
-                <source>&#171;</source>
-                <target>&#171;</target>
+            <trans-unit id="CSTM.prev.news">
+                <source>Previous</source>
+                <target>Vorherige</target>
             </trans-unit>
-            <trans-unit id="CSTM.selfText">
+            <trans-unit id="CSTM.overview.news">
                 <source>Overview</source>
                 <target>Übersicht</target>
             </trans-unit>
-            <trans-unit id="CSTM.nextText">
-                <source>&#187;</source>
-                <target>&#187;</target>
+            <trans-unit id="CSTM.next.news">
+                <source>Next</source>
+                <target>Nächste</target>
+            </trans-unit>
+            <trans-unit id="CSTM.prev.event">
+                <source>Previous</source>
+                <target>Vorheriger</target>
+            </trans-unit>
+            <trans-unit id="CSTM.overview.event">
+                <source>Overview</source>
+                <target>Übersicht</target>
+            </trans-unit>
+            <trans-unit id="CSTM.next.event">
+                <source>Next</source>
+                <target>Nächster</target>
             </trans-unit>
         </body>
     </file>

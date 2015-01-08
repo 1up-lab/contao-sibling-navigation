@@ -1,15 +1,15 @@
 <div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
 
     <?php if ($this->prev): ?>
-        <a class="s-prev" href="<?php echo $this->prev; ?>" title=""><?php echo $this->prevText; ?></a>
+        <a class="s-prev" href="<?php echo $this->prev; ?>" title="">&#171; <?php echo $GLOBALS['TL_LANG']['CSTM']['prev']['event'] ?></a>
     <?php endif; ?>
 
     <?php if ($this->self): ?>
-        <a href="<?php echo $this->self; ?>" title=""><?php echo $this->selfText; ?></a>
+        <a href="<?php echo $this->overview; ?>" title=""><?php echo $GLOBALS['TL_LANG']['CSTM']['overview']['event'] ?></a>
     <?php endif; ?>
 
     <?php if ($this->next): ?>
-        <a class="s-next" href="<?php echo $this->next; ?>" title=""><?php echo $this->nextText; ?></a>
+        <a class="s-next" href="<?php echo $this->next; ?>" title="">&#187; <?php echo $GLOBALS['TL_LANG']['CSTM']['next']['event'] ?></a>
     <?php endif; ?>
 
 </div>

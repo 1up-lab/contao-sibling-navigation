@@ -8,8 +8,8 @@
             <source>Wählen Sie hier die News-Archive, welche die Navigation berücksichtigen soll.</source>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_news.0">
-            <source>Sibling navigation</source>
-            <target>Vor-/Zurück-Navigation</target>
+            <source>Sibling navigation (News)</source>
+            <target>Vor-/Zurück-Navigation (News)</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_news.1">
             <source>Creates a sibling navigation (forth/back).</source>
@@ -22,8 +22,8 @@
             <source>Wählen Sie hier die Kalender, welche die Navigation berücksichtigen soll.</source>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_event.0">
-            <source>Sibling navigation</source>
-            <target>Vor-/Zurück-Navigation</target>
+            <source>Sibling navigation (Events)</source>
+            <target>Vor-/Zurück-Navigation (Events)</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_event.1">
             <source>Creates a sibling navigation (forth/back).</source>

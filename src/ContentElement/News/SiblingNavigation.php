@@ -11,7 +11,9 @@ class SiblingNavigation extends \ContentElement
         if (TL_MODE == 'BE') {
             $objTemplate = new \BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['sibling_navigation_news'][0]).' ###';
+            $objTemplate->wildcard = '### '
+                . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['sibling_navigation_news'][0])
+                . ' ###';
 
             return $objTemplate->parse();
         }
@@ -115,9 +117,9 @@ class SiblingNavigation extends \ContentElement
 
         // take care, prev/next are swapped
         return array(
-            'prev' => $this->generateNewsUrl($objPage, $next),
-            'this' => $this->generateFrontendUrl($objPage->row(), null, $objPage->language),
-            'next' => $this->generateNewsUrl($objPage, $prev),
+            'prev'     => $this->generateNewsUrl($objPage, $next),
+            'overview' => $this->generateFrontendUrl($objPage->row(), null, $objPage->language),
+            'next'     => $this->generateNewsUrl($objPage, $prev),
         );
     }
 
@@ -127,8 +129,19 @@ class SiblingNavigation extends \ContentElement
             return null;
         }
 
-        $strUrl = $this->generateFrontendUrl($objPage->row(), (($GLOBALS['TL_CONFIG']['useAutoItem'] && !$GLOBALS['TL_CONFIG']['disableAlias']) ?  '/%s' : '/items/%s'), $objPage->language);
-        $strUrl = sprintf($strUrl, (($news->alias != '' && !$GLOBALS['TL_CONFIG']['disableAlias']) ? $news->alias : $news->id));
+        $strUrl = $this->generateFrontendUrl(
+            $objPage->row(),
+            (($GLOBALS['TL_CONFIG']['useAutoItem'] && !$GLOBALS['TL_CONFIG']['disableAlias'])
+                ?  '/%s'
+                : '/items/%s'), $objPage->language
+        );
+
+        $strUrl = sprintf(
+            $strUrl,
+            (($news->alias != '' && !$GLOBALS['TL_CONFIG']['disableAlias'])
+                ? $news->alias
+                : $news->id)
+        );
 
         return $strUrl;
     }
@@ -139,11 +152,8 @@ class SiblingNavigation extends \ContentElement
 
         $siblingNavigation = $this->generateSiblingNavigation($objPage);
 
-        $this->Template->prev = $siblingNavigation['prev'];
-        $this->Template->self = $siblingNavigation['this'];
-        $this->Template->next = $siblingNavigation['next'];
-        $this->Template->prevText = $GLOBALS['TL_LANG']['CSTM']['prevText'];
-        $this->Template->selfText = $GLOBALS['TL_LANG']['CSTM']['selfText'];
-        $this->Template->nextText = $GLOBALS['TL_LANG']['CSTM']['nextText'];
+        $this->Template->prev     = $siblingNavigation['prev'];
+        $this->Template->overview = $siblingNavigation['overview'];
+        $this->Template->next     = $siblingNavigation['next'];
     }
 }
