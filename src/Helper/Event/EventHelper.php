@@ -88,10 +88,10 @@ class EventHelper extends \Backend
         }
 
         return [
-            'prev'      => $this->generateNewsUrl($objPage, $prev),
-            'next'      => $this->generateNewsUrl($objPage, $next),
-            'prevTitle' => $prev->headline,
-            'nextTitle' => $next->headline,
+            'prev'      => $this->generateEventUrl($objPage, $prev),
+            'next'      => $this->generateEventUrl($objPage, $next),
+            'prevTitle' => $prev->title,
+            'nextTitle' => $next->title,
             'objPrev'   => $prev,
             'objNext'   => $next,
         ];
