@@ -113,11 +113,10 @@ class SiblingNavigation extends \ContentElement
             $next = $next->current();
         }
 
-        // take care, prev/next are swapped
         return array(
-            'prev'     => $this->generateNewsUrl($objPage, $next),
+            'prev'     => $this->generateNewsUrl($objPage, $prev),
             'overview' => $this->generateFrontendUrl($objPage->row(), null, $objPage->language),
-            'next'     => $this->generateNewsUrl($objPage, $prev),
+            'next'     => $this->generateNewsUrl($objPage, $next),
         );
     }
 
