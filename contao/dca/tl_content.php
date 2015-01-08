@@ -8,11 +8,11 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['snn_news_archives'] = [
     'inputType'               => 'checkbox',
     'options_callback'        => [
         'Oneup\SiblingNavigation\Helper\News\NewsHelper',
-        'getNewsArchives'
+        'getNewsArchives',
     ],
     'eval'                    => [
-        'multiple'=>true,
-        'mandatory'=>true
+        'multiple' => true,
+        'mandatory' => true,
     ],
-    'sql'                     => "blob NULL"
+    'sql'                     => "blob NULL",
 ];

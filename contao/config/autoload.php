@@ -3,9 +3,7 @@
 /**
  * Register the templates
  */
-TemplateLoader::addFiles(array
-(
+TemplateLoader::addFiles([
     'ce_sibling_navigation_news'  => 'system/modules/sibling-navigation/templates/',
     'mod_sibling_navigation_news' => 'system/modules/sibling-navigation/templates/',
-));
-
+]);
