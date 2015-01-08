@@ -1,6 +1,6 @@
 {
   "name":"oneup/contao-sibling-navigation",
-  "description":"...",
+  "description":"Provides a sibling navigation (Previous/Next) as a ContentElement or a Module for news and events.",
   "keywords":["contao", "sibling", "navigation", "page", "news"],
   "type":"contao-module",
   "homepage":"http://1up.io",
