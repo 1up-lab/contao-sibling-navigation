@@ -20,7 +20,7 @@ class EventHelper extends \Backend
         $objCalendars = $this->Database->execute("SELECT id, title FROM tl_calendar ORDER BY title");
 
         while ($objCalendars->next()) {
-            if ($this->User->hasAccess($objCalendars->id, 'news')) {
+            if ($this->User->hasAccess($objCalendars->id, 'calendars')) {
                 $calendars[$objCalendars->id] = $objCalendars->title;
             }
         }
