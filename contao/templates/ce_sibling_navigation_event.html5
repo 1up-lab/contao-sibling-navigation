@@ -1,0 +1,15 @@
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+    <?php if ($this->prev): ?>
+        <a class="s-prev" href="<?php echo $this->prev; ?>" title=""><?php echo $this->prevText; ?></a>
+    <?php endif; ?>
+
+    <?php if ($this->self): ?>
+        <a href="<?php echo $this->self; ?>" title=""><?php echo $this->selfText; ?></a>
+    <?php endif; ?>
+
+    <?php if ($this->next): ?>
+        <a class="s-next" href="<?php echo $this->next; ?>" title=""><?php echo $this->nextText; ?></a>
+    <?php endif; ?>
+
+</div>

@@ -13,6 +13,18 @@
         <trans-unit id="CTE.sibling_navigation_news.1">
             <source>Creates a sibling navigation for news (forth/back).</source>
         </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_event.0">
+            <source>Sibling navigation (Events)</source>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_event.1">
+            <source>Creates a sibling navigation for events (forth/back).</source>
+        </trans-unit>
+        <trans-unit id="tl_content.snn_event_calendars.0">
+            <source>Calendars</source>
+        </trans-unit>
+        <trans-unit id="tl_content.snn_event_calendars.1">
+            <source>Choose your preferred calendars to include for the navigation.</source>
+        </trans-unit>
     </body>
   </file>
 </xliff>
