@@ -41,6 +41,30 @@
             <source>Choose your preferred calendars to include for the navigation.</source>
             <target>Wählen Sie hier die Kalender, welche die Navigation berücksichtigen soll.</target>
         </trans-unit>
+        <trans-unit id="tl_content.pageType.0">
+            <source>Page type</source>
+            <target>Seitentyp</target>
+        </trans-unit>
+        <trans-unit id="tl_content.pageType.1">
+            <source>Choose your preferred page type to include for the navigation.</source>
+            <target>Wählen Sie den Seitentyp, welcher die Navigation berücksichtigen soll.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.0">
+            <source>Include hidden pages</source>
+            <target>Versteckte Seiten berücksichtigen</target>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.1">
+            <source>Include hidden pages for the navigation.</source>
+            <target>Im Menü versteckte Seiten für die Navigation berücksichtigen.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.0">
+            <source>Include unpublished pages</source>
+            <target>Unveröffentlichte Seiten berücksichtigen</target>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.1">
+            <source>Include unpublished pages for navigation.</source>
+            <target>Unveröffentlichte Seiten für die Navigation berücksichtigen.</target>
+        </trans-unit>
     </body>
   </file>
 </xliff>

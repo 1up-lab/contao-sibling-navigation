@@ -13,17 +13,28 @@ class PageHelper extends \Backend
         $this->import('BackendUser', 'User');
     }
 
-    public function generateSiblingNavigation($objPage)
+    public function generateSiblingNavigation($objPage, $type = 'regular', $hidden = '', $unpublished = '')
     {
         $prev = null;
         $next = null;
 
+        $published = "published = '1'";
+        $hide = "hide = ''";
+
+        if ('1' === $unpublished) {
+            $published = "(published = '1' OR published = '')";
+        }
+
+        if ('1' === $hidden) {
+            $hide = "(hide = '' OR hide = '1')";
+        }
+
         $prev = \PageModel::findAll([
             'column' => [
                 "pid = $objPage->pid",
-                "published ='1'",
-                "hide = ''",
-                "type = 'regular'",
+                $published,
+                $hide,
+                "type = '$type'",
                 "sorting < $objPage->sorting",
             ],
             'order' => 'sorting DESC',
@@ -33,9 +44,9 @@ class PageHelper extends \Backend
         $next = \PageModel::findAll([
             'column' => [
                 "pid = $objPage->pid",
-                "published ='1'",
-                "hide = ''",
-                "type = 'regular'",
+                $published,
+                $hide,
+                "type = '$type'",
                 "sorting > $objPage->sorting",
             ],
             'order' => 'sorting ASC',
@@ -45,8 +56,8 @@ class PageHelper extends \Backend
         return array (
             'prev'      => $prev ? $this->generateFrontendUrl($prev->row()) : null,
             'next'      => $next ? $this->generateFrontendUrl($next->row()) : null,
-            'prevTitle' => $next->title,
-            'nextTitle' => $prev->title,
+            'prevTitle' => $prev ? $prev->title : '',
+            'nextTitle' => $next ? $next->title : '',
             'objPrev'   => $prev,
             'objNext'   => $next,
         );

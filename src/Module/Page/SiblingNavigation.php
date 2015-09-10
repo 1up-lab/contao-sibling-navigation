@@ -36,7 +36,7 @@ class SiblingNavigation extends \Module
 
         $helper = new PageHelper();
 
-        $siblingNavigation = $helper->generateSiblingNavigation($objPage);
+        $siblingNavigation = $helper->generateSiblingNavigation($objPage, $this->pageType, $this->hidden, $this->unpublished);
 
         $this->Template->prev      = $siblingNavigation['prev'];
         $this->Template->next      = $siblingNavigation['next'];
