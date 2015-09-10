@@ -66,7 +66,7 @@ class EventHelper extends \Backend
                 "tl_calendar_events.startTime < ?",
             ],
             'value' => [
-                implode(',', $this->calendars),
+                "'" . implode(',', $this->calendars) . "'",
                 $current->startTime,
             ],
             'order' => 'tl_calendar_events.startTime DESC',
@@ -84,7 +84,7 @@ class EventHelper extends \Backend
                 "tl_calendar_events.startTime > ?",
             ],
             'value' => [
-                implode(',', $this->calendars),
+                "'" . implode(',', $this->calendars) . "'",
                 $current->startTime,
             ],
             'order' => 'tl_calendar_events.startTime ASC',

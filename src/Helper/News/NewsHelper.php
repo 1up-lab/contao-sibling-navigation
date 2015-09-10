@@ -74,7 +74,7 @@ class NewsHelper extends \Backend
                 "tl_news.time < ?",
             ],
             'value' => [
-                implode(',', $this->news_archives),
+                "'" . implode(',', $this->news_archives) . "'",
                 $current->date,
                 $current->time,
             ],
@@ -94,7 +94,7 @@ class NewsHelper extends \Backend
                 "tl_news.time > ?",
             ],
             'value' => [
-                implode(',', $this->news_archives),
+                "'" . implode(',', $this->news_archives) . "'",
                 $current->date,
                 $current->time,
             ],
