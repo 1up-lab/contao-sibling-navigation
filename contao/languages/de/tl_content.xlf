@@ -6,16 +6,24 @@
             <target>Vor-/Zurück-Navigation (News)</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_news.1">
-            <source>Creates a sibling navigation (forth/back)</source>
-            <target>Erzeugt eine Vor-/Zurück-Navigation</target>
+            <source>Creates a sibling navigation (forth/back).</source>
+            <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_event.0">
             <source>Sibling navigation (Events)</source>
             <target>Vor-/Zurück-Navigation (Events)</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_event.1">
-            <source>Creates a sibling navigation (forth/back)</source>
-            <target>Erzeugt eine Vor-/Zurück-Navigation</target>
+            <source>Creates a sibling navigation (forth/back).</source>
+            <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.0">
+            <source>Sibling navigation (Pages)</source>
+            <target>Vor-/Zurück-Navigation (Seiten)</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.1">
+            <source>Creates a sibling navigation (forth/back).</source>
+            <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
         </trans-unit>
         <trans-unit id="tl_content.snn_news_archives.0">
             <source>News archives</source>

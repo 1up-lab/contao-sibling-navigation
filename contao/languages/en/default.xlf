@@ -17,6 +17,12 @@
             <trans-unit id="CSTM.next.event">
                 <source>Next</source>
             </trans-unit>
+            <trans-unit id="CSTM.prev.page">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="CSTM.next.page">
+                <source>Next</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

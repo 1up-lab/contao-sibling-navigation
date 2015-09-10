@@ -3,20 +3,28 @@
     <file datatype="php" original="system/modules/sibling-navigation/languages/en/modules.php" source-language="en">
         <body>
             <trans-unit id="FMD.sibling_navigation_news.0">
-                <source>Sibling navigation</source>
-                <target>Vor-/Zurück-Navigation</target>
+                <source>Sibling navigation (News)</source>
+                <target>Vor-/Zurück-Navigation (Nachrichten)</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_news.1">
-                <source>Creates a sibling navigation (Previous/Next)</source>
-                <target>Erzeugt eine Vor-/Zurück-Navigation</target>
+                <source>Creates a sibling navigation (Previous/Next).</source>
+                <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_event.0">
-                <source>Sibling navigation</source>
-                <target>Vor-/Zurück-Navigation</target>
+                <source>Sibling navigation (Events)</source>
+                <target>Vor-/Zurück-Navigation (Events)</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_event.1">
-                <source>Creates a sibling navigation (Previous/Next)</source>
-                <target>Erzeugt eine Vor-/Zurück-Navigation</target>
+                <source>Creates a sibling navigation (Previous/Next).</source>
+                <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
+            </trans-unit>
+            <trans-unit id="FMD.sibling_navigation_page.0">
+                <source>Sibling navigation (Pages)</source>
+                <target>Vor-/Zurück-Navigation (Seiten)</target>
+            </trans-unit>
+            <trans-unit id="FMD.sibling_navigation_page.1">
+                <source>Creates a sibling navigation (Previous/Next).</source>
+                <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
             </trans-unit>
         </body>
     </file>

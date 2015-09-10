@@ -3,16 +3,22 @@
     <file datatype="php" original="system/modules/sibling-navigation/languages/en/modules.php" source-language="en">
         <body>
             <trans-unit id="FMD.sibling_navigation_news.0">
-                <source>Sibling navigation</source>
+                <source>Sibling navigation (News)</source>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_news.1">
-                <source>Creates a sibling navigation (Previous/Next)</source>
+                <source>Creates a sibling navigation (Previous/Next).</source>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_event.0">
-                <source>Sibling navigation</source>
+                <source>Sibling navigation (Events)</source>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_event.1">
-                <source>Creates a sibling navigation (Previous/Next)</source>
+                <source>Creates a sibling navigation (Previous/Next).</source>
+            </trans-unit>
+            <trans-unit id="FMD.sibling_navigation_page.0">
+                <source>Sibling navigation (Pages)</source>
+            </trans-unit>
+            <trans-unit id="FMD.sibling_navigation_page.1">
+                <source>Creates a sibling navigation (Previous/Next).</source>
             </trans-unit>
         </body>
     </file>

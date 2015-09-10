@@ -13,6 +13,12 @@
         <trans-unit id="CTE.sibling_navigation_event.1">
             <source>Creates a sibling navigation for events (forth/back).</source>
         </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.0">
+            <source>Sibling navigation (Pages)</source>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.1">
+            <source>Creates a sibling navigation for Pages (forth/back).</source>
+        </trans-unit>
         <trans-unit id="tl_content.snn_news_archives.0">
             <source>News archives</source>
         </trans-unit>
