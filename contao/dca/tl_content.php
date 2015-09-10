@@ -14,6 +14,12 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['sibling_navigation_event'] = '
     {expert_legend:hide},guests,cssID,space;
     {invisible_legend:hide},invisible,start,stop';
 
+$GLOBALS['TL_DCA']['tl_content']['palettes']['sibling_navigation_page'] = '
+    {type_legend},type;
+    {protected_legend:hide},protected;
+    {expert_legend:hide},guests,cssID,space;
+    {invisible_legend:hide},invisible,start,stop';
+
 $GLOBALS['TL_DCA']['tl_content']['fields']['snn_news_archives'] = [
     'label'                   => &$GLOBALS['TL_LANG']['tl_content']['snn_news_archives'],
     'exclude'                 => true,
