@@ -13,6 +13,12 @@
         <trans-unit id="CTE.sibling_navigation_event.1">
             <source>Creates a sibling navigation for events (forth/back).</source>
         </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.0">
+            <source>Sibling navigation (Pages)</source>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.1">
+            <source>Creates a sibling navigation for Pages (forth/back).</source>
+        </trans-unit>
         <trans-unit id="tl_content.snn_news_archives.0">
             <source>News archives</source>
         </trans-unit>
@@ -24,6 +30,24 @@
         </trans-unit>
         <trans-unit id="tl_content.snn_event_calendars.1">
             <source>Choose your preferred calendars to include for the navigation.</source>
+        </trans-unit>
+        <trans-unit id="tl_content.pageType.0">
+            <source>Page type</source>
+        </trans-unit>
+        <trans-unit id="tl_content.pageType.1">
+            <source>Choose your preferred page type to include for the navigation.</source>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.0">
+            <source>Include hidden pages</source>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.1">
+            <source>Include hidden pages for the navigation.</source>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.0">
+            <source>Include unpublished pages</source>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.1">
+            <source>Include unpublished pages for navigation.</source>
         </trans-unit>
     </body>
   </file>

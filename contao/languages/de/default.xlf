@@ -22,6 +22,14 @@
                 <source>Next</source>
                 <target>Nächster</target>
             </trans-unit>
+            <trans-unit id="CSTM.prev.page">
+                <source>Previous</source>
+                <target>Vorherige</target>
+            </trans-unit>
+            <trans-unit id="CSTM.next.page">
+                <source>Next</source>
+                <target>Nächste</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

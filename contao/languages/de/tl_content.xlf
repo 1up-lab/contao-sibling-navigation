@@ -6,16 +6,24 @@
             <target>Vor-/Zurück-Navigation (News)</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_news.1">
-            <source>Creates a sibling navigation (forth/back)</source>
-            <target>Erzeugt eine Vor-/Zurück-Navigation</target>
+            <source>Creates a sibling navigation (forth/back).</source>
+            <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_event.0">
             <source>Sibling navigation (Events)</source>
             <target>Vor-/Zurück-Navigation (Events)</target>
         </trans-unit>
         <trans-unit id="CTE.sibling_navigation_event.1">
-            <source>Creates a sibling navigation (forth/back)</source>
-            <target>Erzeugt eine Vor-/Zurück-Navigation</target>
+            <source>Creates a sibling navigation (forth/back).</source>
+            <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.0">
+            <source>Sibling navigation (Pages)</source>
+            <target>Vor-/Zurück-Navigation (Seiten)</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.1">
+            <source>Creates a sibling navigation (forth/back).</source>
+            <target>Erzeugt eine Vor-/Zurück-Navigation.</target>
         </trans-unit>
         <trans-unit id="tl_content.snn_news_archives.0">
             <source>News archives</source>
@@ -32,6 +40,30 @@
         <trans-unit id="tl_content.snn_event_calendars.1">
             <source>Choose your preferred calendars to include for the navigation.</source>
             <target>Wählen Sie hier die Kalender, welche die Navigation berücksichtigen soll.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.pageType.0">
+            <source>Page type</source>
+            <target>Seitentyp</target>
+        </trans-unit>
+        <trans-unit id="tl_content.pageType.1">
+            <source>Choose your preferred page type to include for the navigation.</source>
+            <target>Wählen Sie den Seitentyp, welcher die Navigation berücksichtigen soll.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.0">
+            <source>Include hidden pages</source>
+            <target>Versteckte Seiten berücksichtigen</target>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.1">
+            <source>Include hidden pages for the navigation.</source>
+            <target>Im Menü versteckte Seiten für die Navigation berücksichtigen.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.0">
+            <source>Include unpublished pages</source>
+            <target>Unveröffentlichte Seiten berücksichtigen</target>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.1">
+            <source>Include unpublished pages for navigation.</source>
+            <target>Unveröffentlichte Seiten für die Navigation berücksichtigen.</target>
         </trans-unit>
     </body>
   </file>
