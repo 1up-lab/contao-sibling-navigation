@@ -43,8 +43,8 @@ class PageHelper extends \Backend
         ]);
 
         return array (
-            'prev'      => $this->generateFrontendUrl($prev->row()),
-            'next'      => $this->generateFrontendUrl($next->row()),
+            'prev'      => $prev ? $this->generateFrontendUrl($prev->row()) : null,
+            'next'      => $next ? $this->generateFrontendUrl($next->row()) : null,
             'prevTitle' => $next->title,
             'nextTitle' => $prev->title,
             'objPrev'   => $prev,
