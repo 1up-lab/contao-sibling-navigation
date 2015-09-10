@@ -15,5 +15,5 @@ Use the sibling navigation for:
 * Pages
 
 Available as:
-* Content element.
-* Module.
+* Content element
+* Module
