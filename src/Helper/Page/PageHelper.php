@@ -31,11 +31,16 @@ class PageHelper extends \Backend
 
         $prev = \PageModel::findAll([
             'column' => [
-                "pid = $objPage->pid",
+                "pid = ?",
                 $published,
                 $hide,
-                "type = '$type'",
-                "sorting < $objPage->sorting",
+                "type = ?",
+                "sorting < ?",
+            ],
+            'value' => [
+                $objPage->pid,
+                $type,
+                $objPage->sorting,
             ],
             'order' => 'sorting DESC',
             'limit' => 1,
@@ -43,11 +48,16 @@ class PageHelper extends \Backend
 
         $next = \PageModel::findAll([
             'column' => [
-                "pid = $objPage->pid",
+                "pid = ?",
                 $published,
                 $hide,
-                "type = '$type'",
-                "sorting > $objPage->sorting",
+                "type = ?",
+                "sorting > ?",
+            ],
+            'value' => [
+                $objPage->pid,
+                $type,
+                $objPage->sorting,
             ],
             'order' => 'sorting ASC',
             'limit' => 1,

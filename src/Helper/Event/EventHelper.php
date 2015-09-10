@@ -61,9 +61,13 @@ class EventHelper extends \Backend
         // find prev
         $prev = \CalendarEventsModel::findAll([
             'column' => [
-                "pid IN (".implode(',', $this->calendars).")",
+                "pid IN (?)",
                 "published = '1'",
-                "tl_calendar_events.startTime < $current->startTime",
+                "tl_calendar_events.startTime < ?",
+            ],
+            'value' => [
+                implode(',', $this->calendars),
+                $current->startTime,
             ],
             'order' => 'tl_calendar_events.startTime DESC',
             'limit' => 1,
@@ -75,9 +79,13 @@ class EventHelper extends \Backend
 
         $next = \CalendarEventsModel::findAll([
             'column' => [
-                "pid IN (".implode(',', $this->calendars).")",
+                "pid IN (?)",
                 "published = '1'",
-                "tl_calendar_events.startTime > $current->startTime",
+                "tl_calendar_events.startTime > ?",
+            ],
+            'value' => [
+                implode(',', $this->calendars),
+                $current->startTime,
             ],
             'order' => 'tl_calendar_events.startTime ASC',
             'limit' => 1,

@@ -68,10 +68,15 @@ class NewsHelper extends \Backend
         // find prev
         $prev = \NewsModel::findAll([
             'column' => [
-                "pid IN (".implode(',', $this->news_archives).")",
+                "pid IN (?)",
                 "published = '1'",
-                "tl_news.date < $current->date",
-                "tl_news.time < $current->time",
+                "tl_news.date < ?",
+                "tl_news.time < ?",
+            ],
+            'value' => [
+                implode(',', $this->news_archives),
+                $current->date,
+                $current->time,
             ],
             'order' => 'tl_news.time DESC, tl_news.date DESC',
             'limit' => 1,
@@ -83,10 +88,15 @@ class NewsHelper extends \Backend
 
         $next = \NewsModel::findAll([
             'column' => [
-                "pid IN (".implode(',', $this->news_archives).")",
+                "pid IN (?)",
                 "published = '1'",
-                "tl_news.date > $current->date",
-                "tl_news.time > $current->time",
+                "tl_news.date > ?",
+                "tl_news.time > ?",
+            ],
+            'value' => [
+                implode(',', $this->news_archives),
+                $current->date,
+                $current->time,
             ],
             'order' => 'tl_news.time ASC, tl_news.date ASC',
             'limit' => 1,
