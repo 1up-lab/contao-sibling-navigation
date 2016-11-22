@@ -6,7 +6,7 @@ use Oneup\SiblingNavigation\Helper\Page\PageHelper;
 
 class SiblingNavigation extends \Module
 {
-    protected $strTemplate = 'ce_sibling_navigation_page';
+    protected $strTemplate = 'mod_sibling_navigation_page';
 
     public function generate()
     {
