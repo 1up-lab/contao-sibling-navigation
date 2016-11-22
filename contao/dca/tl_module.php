@@ -1,5 +1,9 @@
 <?php
 
+if (false === class_exists('tl_page')) {
+    require_once(TL_ROOT.'/system/modules/core/dca/tl_page.php');
+}
+
 $GLOBALS['TL_DCA']['tl_module']['palettes']['sibling_navigation_news']  = '
     {title_legend},name,headline,type;
     {config_legend},snn_news_archives;
@@ -51,8 +55,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['snn_event_calendars'] = [
     'sql'                     => "blob NULL",
 ];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['pageType'] = [
-    'label'             => &$GLOBALS['TL_LANG']['tl_content']['pageType'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['pageType'] = [
+    'label'             => &$GLOBALS['TL_LANG']['tl_module']['pageType'],
     'default'           => 'regular',
     'inputType'         => 'select',
     'exclude'           => true,
@@ -72,8 +76,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['pageType'] = [
     'sql'               => "varchar(32) NOT NULL default ''",
 ];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['hidden'] =[
-    'label'     => &$GLOBALS['TL_LANG']['tl_content']['hidden'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['hidden'] =[
+    'label'     => &$GLOBALS['TL_LANG']['tl_module']['hidden'],
     'exclude'   => true,
     'inputType' => 'checkbox',
     'eval'      => [
@@ -82,8 +86,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['hidden'] =[
     'sql'       => "char(1) NOT NULL default ''",
 ];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['unpublished'] = [
-    'label'     => &$GLOBALS['TL_LANG']['tl_content']['unpublished'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['unpublished'] = [
+    'label'     => &$GLOBALS['TL_LANG']['tl_module']['unpublished'],
     'exclude'   => true,
     'inputType' => 'checkbox',
     'eval'      => [
