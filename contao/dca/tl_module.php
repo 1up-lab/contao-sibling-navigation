@@ -1,9 +1,5 @@
 <?php
 
-if (false === class_exists('tl_page')) {
-    require_once(TL_ROOT.'/system/modules/core/dca/tl_page.php');
-}
-
 $GLOBALS['TL_DCA']['tl_module']['palettes']['sibling_navigation_news']  = '
     {title_legend},name,headline,type;
     {config_legend},snn_news_archives;
