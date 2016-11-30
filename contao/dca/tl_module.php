@@ -56,10 +56,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['pageType'] = [
     'default'           => 'regular',
     'inputType'         => 'select',
     'exclude'           => true,
-    'options_callback'  => [
-        'tl_page',
-        'getPageTypes'
-    ],
+    'options'           => $GLOBALS['TL_PTY'],
     'eval'              => [
         'helpwizard'        => true,
         'submitOnChange'    => true,
