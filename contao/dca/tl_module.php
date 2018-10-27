@@ -63,9 +63,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['pageType'] = [
         'tl_class'          => 'w50',
     ],
     'reference'         => &$GLOBALS['TL_LANG']['PTY'],
-    'save_callback'     => [
-        ['tl_page', 'checkRootType']
-    ],
     'sql'               => "varchar(32) NOT NULL default ''",
 ];
 
