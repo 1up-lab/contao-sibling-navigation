@@ -30,13 +30,13 @@ class EventHelper extends \Backend
 
     public function generateSiblingNavigation($objPage, $eventCalendars)
     {
-        // Set the item from the auto_item parameter
-        if (!isset($_GET['items']) && $GLOBALS['TL_CONFIG']['useAutoItem'] && isset($_GET['auto_item'])) {
-            \Input::setGet('items', \Input::get('auto_item'));
+        // Set the event from the auto_item parameter
+        if (!isset($_GET['events']) && $GLOBALS['TL_CONFIG']['useAutoItem'] && isset($_GET['auto_item'])) {
+            \Input::setGet('events', \Input::get('auto_item'));
         }
 
-        // Do not index or cache the page if no news item has been specified
-        if (!\Input::get('items')) {
+        // Do not index or cache the page if no event item has been specified
+        if (!\Input::get('events')) {
             $objPage->noSearch = 1;
             $objPage->cache = 0;
 
@@ -50,7 +50,7 @@ class EventHelper extends \Backend
             return [];
         }
 
-        $alias = \Input::get('items');
+        $alias = \Input::get('events');
 
         $current = \CalendarEventsModel::findByIdOrAlias($alias);
 
@@ -146,7 +146,7 @@ class EventHelper extends \Backend
             $objPage->row(),
             (($GLOBALS['TL_CONFIG']['useAutoItem'] && !$GLOBALS['TL_CONFIG']['disableAlias'])
                 ?  '/%s'
-                : '/items/%s'), $objPage->language
+                : '/events/%s'), $objPage->language
         );
 
         $strUrl = sprintf(
