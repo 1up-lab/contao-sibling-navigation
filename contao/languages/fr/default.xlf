@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_content.config_legend">
+                <target>Paramètres</target>
+            </trans-unit>
+            <trans-unit id="CSTM.prev.news">
+                <target>Précédent</target>
+            </trans-unit>
+            <trans-unit id="CSTM.next.news">
+                <target>Suivant</target>
+            </trans-unit>
+            <trans-unit id="CSTM.prev.event">
+                <target>Précédent</target>
+            </trans-unit>
+            <trans-unit id="CSTM.next.event">
+                <target>Suivant</target>
+            </trans-unit>
+            <trans-unit id="CSTM.prev.page">
+                <target>Précédent</target>
+            </trans-unit>
+            <trans-unit id="CSTM.next.page">
+                <target>Suivant</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

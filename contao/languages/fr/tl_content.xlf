@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file>
+    <body>
+        <trans-unit id="CTE.sibling_navigation_news.0">
+            <target>Navigation avant/arrière (Actualité)</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_news.1">
+            <target>Crée une navigation avant/arrière.</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_event.0">
+            <target>Navigation avant/arrière (événements)</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_event.1">
+            <target>Crée une navigation avant/arrière.</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.0">
+            <target>Navigation avant/arrière (pages)</target>
+        </trans-unit>
+        <trans-unit id="CTE.sibling_navigation_page.1">
+            <target>Crée une navigation avant/arrière.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.snn_news_archives.0">
+            <target>Archives des nouvelles</target>
+        </trans-unit>
+        <trans-unit id="tl_content.snn_news_archives.1">
+            <target>Sélectionnez les archives d'actualités dont la navigation doit tenir compte.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.snn_event_calendars.0">
+            <target>Calendrier</target>
+        </trans-unit>
+        <trans-unit id="tl_content.snn_event_calendars.1">
+            <target>Sélectionnez le calendrier que la navigation doit prendre en compte.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.pageType.0">
+            <target>Type de page</target>
+        </trans-unit>
+        <trans-unit id="tl_content.pageType.1">
+            <target>Sélectionnez le type de page qui doit prendre en compte la navigation.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.0">
+            <target>Considérer les pages cachées</target>
+        </trans-unit>
+        <trans-unit id="tl_content.hidden.1">
+            <target>Considérez les pages cachées dans le menu pour la navigation.</target>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.0">
+            <target>Considérer les pages non publiées</target>
+        </trans-unit>
+        <trans-unit id="tl_content.unpublished.1">
+            <target>Considérez les pages non publiées pour la navigation.</target>
+        </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file>
+    <body>
+        <trans-unit id="tl_module.snn_news_archives.0">
+            <target>Archives des nouvelles</target>
+        </trans-unit>
+        <trans-unit id="tl_module.snn_news_archives.1">
+            <target>Sélectionnez les archives de nouvelles dont la navigation doit tenir compte.</target>
+        </trans-unit>
+        <trans-unit id="tl_module.snn_event_calendars.0">
+            <source>Calendrier</source>
+        </trans-unit>
+        <trans-unit id="tl_module.snn_event_calendars.1">
+            <source>Sélectionnez le calendrier que la navigation doit prendre en compte.</source>
+        </trans-unit>
+        <trans-unit id="tl_module.pageType.0">
+            <target>Type de page</target>
+        </trans-unit>
+        <trans-unit id="tl_module.pageType.1">
+            <target>Sélectionnez le type de page qui doit prendre en compte la navigation.</target>
+        </trans-unit>
+        <trans-unit id="tl_module.hidden.0">
+            <target>Prendre en compte les pages cachées</target>
+        </trans-unit>
+        <trans-unit id="tl_module.hidden.1">
+            <target>Considérez les pages cachées dans le menu pour la navigation.</target>
+        </trans-unit>
+        <trans-unit id="tl_module.unpublished.0">
+            <target>Considérer les pages non publiées</target>
+        </trans-unit>
+        <trans-unit id="tl_module.unpublished.1">
+            <target>Considérez les pages non publiées pour la navigation.</target>
+        </trans-unit>
+    </body>
+  </file>
+</xliff>
