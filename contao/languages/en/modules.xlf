@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.1">
-    <file datatype="php" original="system/modules/sibling-navigation/languages/en/modules.php" source-language="en">
+<?xml version="1.0" ?><xliff version="1.1">
+    <file>
         <body>
             <trans-unit id="FMD.sibling_navigation_news.0">
-                <source>Sibling navigation (News)</source>
+                <target>Sibling navigation (News)</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_news.1">
-                <source>Creates a sibling navigation (Previous/Next).</source>
+                <target>Creates a sibling navigation (Previous/Next).</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_event.0">
-                <source>Sibling navigation (Events)</source>
+                <target>Sibling navigation (Events)</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_event.1">
-                <source>Creates a sibling navigation (Previous/Next).</source>
+                <target>Creates a sibling navigation (Previous/Next).</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_page.0">
-                <source>Sibling navigation (Pages)</source>
+                <target>Sibling navigation (Pages)</target>
             </trans-unit>
             <trans-unit id="FMD.sibling_navigation_page.1">
-                <source>Creates a sibling navigation (Previous/Next).</source>
+                <target>Creates a sibling navigation (Previous/Next).</target>
             </trans-unit>
         </body>
     </file>

@@ -1,33 +1,25 @@
-<?xml version="1.0" ?>
-<xliff version="1.1">
-    <file datatype="php" original="system/modules/sibling-navigation/languages/en/default.php" source-language="en">
+<?xml version="1.0" ?><xliff version="1.1">
+    <file>
         <body>
             <trans-unit id="tl_content.config_legend">
-                <source>Settings</source>
                 <target>Einstellungen</target>
             </trans-unit>
             <trans-unit id="CSTM.prev.news">
-                <source>Previous</source>
                 <target>Vorherige</target>
             </trans-unit>
             <trans-unit id="CSTM.next.news">
-                <source>Next</source>
                 <target>Nächste</target>
             </trans-unit>
             <trans-unit id="CSTM.prev.event">
-                <source>Previous</source>
                 <target>Vorheriger</target>
             </trans-unit>
             <trans-unit id="CSTM.next.event">
-                <source>Next</source>
                 <target>Nächster</target>
             </trans-unit>
             <trans-unit id="CSTM.prev.page">
-                <source>Previous</source>
                 <target>Vorherige</target>
             </trans-unit>
             <trans-unit id="CSTM.next.page">
-                <source>Next</source>
                 <target>Nächste</target>
             </trans-unit>
         </body>

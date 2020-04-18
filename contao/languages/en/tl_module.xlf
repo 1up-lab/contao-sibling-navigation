@@ -1,36 +1,37 @@
-<?xml version="1.0" ?><xliff version="1.1">
-  <file datatype="php" original="system/modules/sibling-navigation/languages/en/tl_module.php" source-language="en">
-    <body>
-        <trans-unit id="tl_module.snn_news_archives.0">
-            <source>News archives</source>
-        </trans-unit>
-        <trans-unit id="tl_module.snn_news_archives.1">
-            <source>Choose your preferred news archives to include for the navigation.</source>
-        </trans-unit>
-        <trans-unit id="tl_module.snn_event_calendars.0">
-            <source>Calendars</source>
-        </trans-unit>
-        <trans-unit id="tl_module.snn_event_calendars.1">
-            <source>Choose your preferred calendars to include for the navigation.</source>
-        </trans-unit>
-        <trans-unit id="tl_module.pageType.0">
-            <source>Page type</source>
-        </trans-unit>
-        <trans-unit id="tl_module.pageType.1">
-            <source>Choose your preferred page type to include for the navigation.</source>
-        </trans-unit>
-        <trans-unit id="tl_module.hidden.0">
-            <source>Include hidden pages</source>
-        </trans-unit>
-        <trans-unit id="tl_module.hidden.1">
-            <source>Include hidden pages for the navigation.</source>
-        </trans-unit>
-        <trans-unit id="tl_module.unpublished.0">
-            <source>Include unpublished pages</source>
-        </trans-unit>
-        <trans-unit id="tl_module.unpublished.1">
-            <source>Include unpublished pages for navigation.</source>
-        </trans-unit>
-    </body>
-  </file>
+<?xml version="1.0" ?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_module.snn_news_archives.0">
+                <target>News archives</target>
+            </trans-unit>
+            <trans-unit id="tl_module.snn_news_archives.1">
+                <target>Choose your preferred news archives to include for the navigation.</target>
+            </trans-unit>
+            <trans-unit id="tl_module.snn_event_calendars.0">
+                <target>Calendars</target>
+            </trans-unit>
+            <trans-unit id="tl_module.snn_event_calendars.1">
+                <target>Choose your preferred calendars to include for the navigation.</target>
+            </trans-unit>
+            <trans-unit id="tl_module.pageType.0">
+                <target>Page type</target>
+            </trans-unit>
+            <trans-unit id="tl_module.pageType.1">
+                <target>Choose your preferred page type to include for the navigation.</target>
+            </trans-unit>
+            <trans-unit id="tl_module.hidden.0">
+                <target>Include hidden pages</target>
+            </trans-unit>
+            <trans-unit id="tl_module.hidden.1">
+                <target>Include hidden pages for the navigation.</target>
+            </trans-unit>
+            <trans-unit id="tl_module.unpublished.0">
+                <target>Include unpublished pages</target>
+            </trans-unit>
+            <trans-unit id="tl_module.unpublished.1">
+                <target>Include unpublished pages for navigation.</target>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>
