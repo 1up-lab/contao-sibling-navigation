@@ -1,61 +1,67 @@
 {
-  "name":"oneup/contao-sibling-navigation",
-  "description":"Provides a sibling navigation (Previous/Next) as a ContentElement or a Module for news and events.",
-  "keywords":["contao", "sibling", "navigation", "page", "news"],
-  "type":"contao-module",
-  "homepage":"http://1up.io",
-  "license":"MIT",
-  "authors":[
-    {
-      "name":"David Greminger",
-      "email":"dg@1up.io",
-      "homepage":"http://1up.io",
-      "role":"Developer"
+    "name": "oneup/contao-sibling-navigation",
+    "description": "Provides a sibling navigation (Previous/Next) as a ContentElement or a Module for news and events.",
+    "keywords": [
+        "contao",
+        "sibling",
+        "navigation",
+        "page",
+        "news"
+    ],
+    "type": "contao-module",
+    "homepage": "http://1up.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Greminger",
+            "email": "dg@1up.io",
+            "homepage": "http://1up.io",
+            "role": "Developer"
+        },
+        {
+            "name": "Jim Schmid",
+            "email": "js@1up.io",
+            "homepage": "http://1up.io",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "hello@1up.io",
+        "issues": "https://github.com/1up-lab/contao-sibling-navigation/issues",
+        "irc": "irc://irc.freenode.org/contao.dev",
+        "source": "https://github.com/1up-lab/contao-sibling-navigation"
     },
-    {
-      "name":"Jim Schmid",
-      "email":"js@1up.io",
-      "homepage":"http://1up.io",
-      "role":"Developer"
-    }
-  ],
-  "support":{
-    "email":"hello@1up.io",
-    "issues":"https://github.com/1up-lab/contao-sibling-navigation/issues",
-    "irc":"irc://irc.freenode.org/contao.dev",
-    "source":"https://github.com/1up-lab/contao-sibling-navigation"
-  },
-  "require":{
-    "php": ">=5.4",
-    "contao/core-bundle": "^3.2|^4.4",
-    "contao-community-alliance/composer-plugin": "^2.0|^3.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~3.7"
-  },
-  "conflict": {
-    "contao/core-bundle": "3.4.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Oneup\\SiblingNavigation\\": "src"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Oneup\\Test\\SiblingNavigation\\": "tests"
-    }
-  },
-  "extra": {
-    "contao": {
-      "sources": {
-        "contao": "system/modules/sibling-navigation"
-      }
+    "require": {
+        "php": ">=5.4",
+        "contao/core-bundle": "^3.2|^4.4",
+        "contao-community-alliance/composer-plugin": "^2.0|^3.0"
     },
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "require-dev": {
+        "phpunit/phpunit": "~3.7"
+    },
+    "conflict": {
+        "contao/core-bundle": "3.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oneup\\SiblingNavigation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Oneup\\Test\\SiblingNavigation\\": "tests"
+        }
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "contao": "system/modules/sibling-navigation"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
