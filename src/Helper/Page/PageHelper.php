@@ -15,10 +15,9 @@ class PageHelper extends \Backend
 
     public function generateSiblingNavigation($objPage, $type = 'regular', $hidden = '', $unpublished = '')
     {
-        $prev = null;
-        $next = null;
+        $time = time();
 
-        $published = "published = '1'";
+        $published = "published = '1' AND (start='' OR start<='$time') AND (stop='' OR stop>'$time')";
         $hide = "hide = ''";
 
         if ('1' === $unpublished) {
