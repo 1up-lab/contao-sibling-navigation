@@ -60,6 +60,7 @@ class NewsHelper extends \Backend
         $alias = \Input::get('items');
 
         $current = \NewsModel::findByIdOrAlias($alias);
+        $time = time();
 
         if (!in_array($current->pid, $this->news_archives)) {
             $this->news_archives = [$current->pid];
@@ -69,7 +70,7 @@ class NewsHelper extends \Backend
         $prev = \NewsModel::findAll([
             'column' => [
                 "pid IN (?)",
-                "published = '1'",
+                "published = '1' AND (start='' OR start<='$time') AND (stop='' OR stop>'$time')",
                 "tl_news.date < ?",
                 "tl_news.time < ?",
             ],
@@ -89,7 +90,7 @@ class NewsHelper extends \Backend
         $next = \NewsModel::findAll([
             'column' => [
                 "pid IN (?)",
-                "published = '1'",
+                "published = '1' AND (start='' OR start<='$time') AND (stop='' OR stop>'$time')",
                 "tl_news.date > ?",
                 "tl_news.time > ?",
             ],

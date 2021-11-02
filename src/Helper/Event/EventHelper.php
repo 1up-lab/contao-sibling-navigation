@@ -53,6 +53,7 @@ class EventHelper extends \Backend
         $alias = \Input::get('events');
 
         $current = \CalendarEventsModel::findByIdOrAlias($alias);
+        $time = time();
 
         if (!in_array($current->pid, $this->calendars)) {
             $this->calendars = [$current->pid];
@@ -62,7 +63,7 @@ class EventHelper extends \Backend
         $prev = \CalendarEventsModel::findAll([
             'column' => [
                 "pid IN (?)",
-                "published = '1'",
+                "published = '1' AND (start='' OR start<='$time') AND (stop='' OR stop>'$time')",
                 "tl_calendar_events.startTime < ?",
             ],
             'value' => [
@@ -80,7 +81,7 @@ class EventHelper extends \Backend
         $next = \CalendarEventsModel::findAll([
             'column' => [
                 "pid IN (?)",
-                "published = '1'",
+                "published = '1' AND (start='' OR start<='$time') AND (stop='' OR stop>'$time')",
                 "tl_calendar_events.startTime > ?",
             ],
             'value' => [
