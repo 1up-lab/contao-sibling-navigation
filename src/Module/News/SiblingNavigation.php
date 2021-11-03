@@ -14,7 +14,7 @@ class SiblingNavigation extends \Module
             $objTemplate = new \BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### '
-                . utf8_strtoupper($GLOBALS['TL_LANG']['MOD']['sibling_navigation_news'][0])
+                . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['sibling_navigation_news'][0])
                 . ' ###';
 
             $objTemplate->title = $this->headline;
@@ -27,8 +27,6 @@ class SiblingNavigation extends \Module
 
         return parent::generate();
     }
-
-
 
     protected function compile()
     {
