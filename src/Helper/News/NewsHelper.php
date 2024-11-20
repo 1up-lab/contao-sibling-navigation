@@ -157,14 +157,14 @@ class NewsHelper extends \Backend
 
         $strUrl = $this->generateFrontendUrl(
             $objPage->row(),
-            (($GLOBALS['TL_CONFIG']['useAutoItem'] && !$GLOBALS['TL_CONFIG']['disableAlias'])
+            (($GLOBALS['TL_CONFIG']['useAutoItem'] && !$GLOBALS['TL_CONFIG']['disableAlias'] ?? null)
                 ?  '/%s'
                 : '/items/%s'), $objPage->language
         );
 
         $strUrl = sprintf(
             $strUrl,
-            (($news->alias != '' && !$GLOBALS['TL_CONFIG']['disableAlias'])
+            (($news->alias !== '' && !$GLOBALS['TL_CONFIG']['disableAlias'] ?? null)
                 ? $news->alias
                 : $news->id)
         );
