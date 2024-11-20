@@ -145,14 +145,14 @@ class EventHelper extends \Backend
 
         $strUrl = $this->generateFrontendUrl(
             $objPage->row(),
-            (($GLOBALS['TL_CONFIG']['useAutoItem'] && !$GLOBALS['TL_CONFIG']['disableAlias'])
+            (($GLOBALS['TL_CONFIG']['useAutoItem'] && !$GLOBALS['TL_CONFIG']['disableAlias'] ?? null)
                 ?  '/%s'
                 : '/events/%s'), $objPage->language
         );
 
         $strUrl = sprintf(
             $strUrl,
-            (($news->alias != '' && !$GLOBALS['TL_CONFIG']['disableAlias'])
+            (($news->alias !== '' && !$GLOBALS['TL_CONFIG']['disableAlias'] ?? null)
                 ? $news->alias
                 : $news->id)
         );
